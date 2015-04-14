@@ -1265,6 +1265,11 @@
             return result;
         },
 
+        ExportDefaultDeclaration: function (stmt, flags) {
+            stmt.default = true;
+            return this.ExportDeclaration(stmt, flags);
+        },
+
         ExpressionStatement: function (stmt, flags) {
             var result, fragment;
 
