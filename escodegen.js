@@ -2233,7 +2233,7 @@
         },
 
         ImportDefaultSpecifier: function (expr, precedence, flags) {
-            return generateIdentifier(expr.id);
+            return generateIdentifier(expr.id || expr.local);
         },
 
         ImportNamespaceSpecifier: function (expr, precedence, flags) {
